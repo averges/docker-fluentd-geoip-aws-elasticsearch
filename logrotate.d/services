@@ -1,0 +1,13 @@
+/var/log/*.log {
+  rotate 31
+  daily
+  dateext
+  compress
+  compresscmd /usr/bin/bzip2
+  uncompresscmd /usr/bin/bunzip2
+  compressoptions -9
+  compressext .bz2
+  delaycompress
+  copytruncate
+  missingok
+}
